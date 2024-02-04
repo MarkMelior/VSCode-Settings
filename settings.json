@@ -1,0 +1,253 @@
+{
+	// * Custom Theme
+	"workbench.colorTheme": "Bearded Theme Anthracite",
+	"workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.activeIconPack": "react",
+	"editor.detectIndentation": false,
+	"editor.linkedEditing": true,
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"editor.cursorBlinking": "expand", // мигающей курсор
+	"terminal.integrated.cursorBlinking": true, // мигающей курсор
+	"editor.padding.top": 15, // отступ сверху кода
+	"editor.glyphMargin": false, // debug points
+	"explorer.autoReveal": true, // always select opened file (like webstorm)
+	"explorer.compactFolders": false,
+	"editor.overviewRulerBorder": false,
+	// Colors like Windows 11
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#111111",
+		"activityBar.border": "#ffffff05",
+		"sideBar.background": "#111111",
+		"tab.inactiveBackground": "#111111",
+		"tab.activeBorderTop": "#a2abb5",
+		"tab.unfocusedHoverBorder": "#a2abb5",
+		"sideBarSectionHeader.background": "#111111",
+		"editorGroupHeader.tabsBackground": "#111111",
+		"sideBar.border": "#ffffff05",
+		"sideBarSectionHeader.border": "#ffffff05",
+		"panel.background": "#191919",
+		"panel.border": "#ffffff05",
+		"editor.background": "#191919",
+		"statusBar.background": "#191919",
+		"statusBar.border": "#ffffff05",
+		"breadcrumb.background": "#191919",
+		"editorGutter.background": "#191919",
+		"tab.activeBackground": "#191919",
+		"tab.hoverBackground": "#191919",
+		"tab.border": "#ffffff05",
+		"terminal.background": "#191919",
+		"titleBar.activeBackground": "#0a0a0a",
+		"commandCenter.background": "#0a0a0a",
+		"commandCenter.activeBackground": "#191919",
+		"commandCenter.activeBorder": "#ffffff05",
+		"focusBorder": "#ffffff00"
+	},
+	// Подсветка выделенного блока кода
+	"editor.guides.bracketPairs": "active",
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.guides.bracketPairsHorizontal": false,
+	// Smooth scroll
+	"editor.smoothScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	"terminal.integrated.smoothScrolling": true,
+	// Font
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+	"editor.fontFamily": "JetBrains Mono",
+	"editor.fontLigatures": true,
+
+	// * EMMET: bug fix JSX
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact"
+	},
+
+	// * Extensions: Inline-parameters
+	"inline-parameters.fontSize": "0.8em",
+	"inline-parameters.fontWeight": "100",
+	"inline-parameters.padding": "0.15em 0.5em",
+	"inline-parameters.border": "",
+	"inline-parameters.hideSingleParameters": true,
+
+	// * Extensions: Code Spell Checker
+	"cSpell.language": "en, ru",
+	"cSpell.userWords": [
+		"aiogram",
+		"Behance",
+		"blackhole",
+		"Boosty",
+		"callout",
+		"clsx",
+		"codewars",
+		"Dispath",
+		"dotenv",
+		"elementor",
+		"esbenp",
+		"iconbox",
+		"iconboxes",
+		"maxsplit",
+		"Melior",
+		"Metrika",
+		"nestjs",
+		"noselect",
+		"Parens",
+		"Photoshop",
+		"postbuild",
+		"pyrogram",
+		"reduxjs",
+		"Runtimes",
+		"stylelint",
+		"WAVEBAR",
+		"webm",
+		"Иконка",
+		"лоадеры",
+		"откл",
+		"скролл",
+		"webstorm"
+	],
+
+	// * Extensions: ESLINT
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always"
+	},
+
+	// * Extensions: Prettier
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"javascript.preferences.quoteStyle": "single",
+	"typescript.preferences.quoteStyle": "single",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true,
+	"prettier.semi": false,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "none",
+	"prettier.arrowParens": "avoid",
+	"prettier.jsxSingleQuote": true,
+	"editor.wordWrap": "on",
+	"prettier.printWidth": 80,
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+
+	// * Extensions: Folder-templates
+	"folderTemplates.fileTemplates": {
+		"React Component": [
+			"import { FC, ReactNode } from 'react'",
+			"import cls from './<FTName>.module.scss'",
+			"import { classNames } from 'shared/lib/classNames/classNames'",
+			"import { useTranslation } from 'react-i18next'",
+			"",
+			"interface <FTName>Props {",
+			" className?: string",
+			" children?: ReactNode",
+			"}",
+			"",
+			"export const <FTName>: FC<<FTName>Props> = ({ className, children, ...otherProps }) => {",
+			"const { t } = useTranslation()",
+			"",
+			" return (",
+			"  <div className={classNames(cls.<FTName>, {}, [className])} {...otherProps}>",
+			"   {children}",
+			"  </div>",
+			" )",
+			"}"
+		],
+		"index.ts": [
+			"import { <FTName> } from './ui/<FTName>'",
+			"",
+			"export { <FTName> }"
+		],
+		"module scss": [".<FTName> {}"]
+	},
+	"folderTemplates.structures": [
+		{
+			"name": "FSD",
+			"structure": [
+				{
+					"fileName": "ui/<FTName>.tsx",
+					"template": "React Component"
+				},
+				{
+					"fileName": "ui/<FTName>.module.scss",
+					"template": "module scss"
+				},
+				{
+					"fileName": "index.ts",
+					"template": "index.ts"
+				}
+			]
+		},
+		{
+			"name": "React Component",
+			"structure": [
+				{
+					"fileName": "<FTName>.tsx",
+					"template": "React Component"
+				},
+				{
+					"fileName": "<FTName>.module.scss",
+					"template": "module scss"
+				}
+			]
+		}
+	],
+
+	// todo --- OTHER ---
+	"codeium.enableCodeLens": false,
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "compressed",
+			"extensionName": ".css",
+			"savePath": "/"
+		}
+		// {
+		// 	"format": "expanded",
+		// 	"extensionName": ".css",
+		// 	"savePath": "~/css"
+		// },
+		// {
+		// 	"format": "compressed",
+		// 	"extensionName": ".css",
+		// 	"savePath": "/dist/css"
+		// }
+	],
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"workbench.settings.applyToAllProfiles": [],
+	"liveServer.settings.donotShowInfoMsg": true,
+	"security.workspace.trust.untrustedFiles": "open",
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"gitlens.graph.minimap.additionalTypes": ["tags", "localBranches"],
+	"gitlens.graph.minimap.enabled": false,
+	"git.autofetch": true,
+	"terminal.integrated.env.windows": {},
+	"gitlens.views.remotes.branches.layout": "list",
+	"gitlens.views.commitDetails.files.layout": "tree",
+	"console-ninja.featureSet": "Community",
+	"bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
+	"workbench.startupEditor": "none",
+	"git.confirmSync": false,
+	"editor.minimap.enabled": false,
+	"console-ninja.showWhatsNew": false,
+	"markdown-preview-enhanced.codeBlockTheme": "atom-dark.css",
+	"markdown-preview-enhanced.previewTheme": "one-dark.css",
+	"codeium.enableConfig": {
+		"*": true,
+		"javascript": false
+	},
+	"workbench.activityBar.location": "top",
+	"i18n-ally.displayLanguage": "ru",
+	"i18n-ally.dirStructure": "auto",
+	"stylelint.snippet": ["scss"],
+	"stylelint.validate": ["css", "less", "postcss", "scss"],
+	"inlang.userId": "cf4e99dd-80f9-4c16-9e18-4f7f1c15938e",
+	"workbench.sideBar.location": "right"
+}

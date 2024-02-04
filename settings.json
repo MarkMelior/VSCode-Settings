@@ -61,17 +61,11 @@
 		"typescript": "typescriptreact"
 	},
 
-	// * Extensions: Inline-parameters
-	"inline-parameters.fontSize": "0.8em",
-	"inline-parameters.fontWeight": "100",
-	"inline-parameters.padding": "0.15em 0.5em",
-	"inline-parameters.border": "",
-	"inline-parameters.hideSingleParameters": true,
-
 	// * Extensions: Code Spell Checker
 	"cSpell.language": "en, ru",
 	"cSpell.userWords": [
 		"aiogram",
+		"autopep",
 		"Behance",
 		"blackhole",
 		"Boosty",
@@ -98,33 +92,34 @@
 		"stylelint",
 		"WAVEBAR",
 		"webm",
+		"webstorm",
 		"Иконка",
 		"лоадеры",
 		"откл",
-		"скролл",
-		"webstorm"
+		"скролл"
 	],
 
 	// * Extensions: ESLINT
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "always"
-	},
+	// "editor.codeActionsOnSave": {
+	// 	"source.fixAll": "always"
+	// },
 
 	// * Extensions: Prettier
-	"editor.insertSpaces": false,
-	"editor.tabSize": 2,
 	"editor.formatOnSave": true,
 	"editor.formatOnPaste": true,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"javascript.preferences.quoteStyle": "single",
 	"typescript.preferences.quoteStyle": "single",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"prettier.tabWidth": 2,
 	"prettier.useTabs": true,
-	"prettier.semi": false,
+	"prettier.semi": true,
 	"prettier.singleQuote": true,
-	"prettier.trailingComma": "none",
-	"prettier.arrowParens": "avoid",
+	"prettier.trailingComma": "all",
+	"prettier.arrowParens": "always",
 	"prettier.jsxSingleQuote": true,
+	"prettier.bracketSpacing": true,
 	"editor.wordWrap": "on",
 	"prettier.printWidth": 80,
 	"[python]": {

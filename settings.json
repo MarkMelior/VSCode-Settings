@@ -61,6 +61,9 @@
 		"typescript": "typescriptreact"
 	},
 
+	// * i18n-ally : bug cyrillic fix
+	"i18n-ally.regex.key": ".*?",
+
 	// * Extensions: Code Spell Checker
 	"cSpell.language": "en, ru",
 	"cSpell.userWords": [

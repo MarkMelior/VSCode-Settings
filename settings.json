@@ -8,6 +8,7 @@
 	"editor.unicodeHighlight.ambiguousCharacters": false,
 	"editor.cursorBlinking": "expand", // мигающей курсор
 	"terminal.integrated.cursorBlinking": true, // мигающей курсор
+	// "editor.gotoLocation.multipleDefinitions": "goto", // сразу открыть при наведении +ctrl
 	"editor.padding.top": 15, // отступ сверху кода
 	"editor.glyphMargin": false, // debug points
 	"explorer.autoReveal": true, // always select opened file (like webstorm)
@@ -68,6 +69,7 @@
 	"cSpell.language": "en, ru",
 	"cSpell.userWords": [
 		"aiogram",
+		"autodocs",
 		"autopep",
 		"Behance",
 		"blackhole",
@@ -93,6 +95,7 @@
 		"reduxjs",
 		"Runtimes",
 		"stylelint",
+		"testid",
 		"WAVEBAR",
 		"webm",
 		"webstorm",
@@ -113,6 +116,9 @@
 	"editor.insertSpaces": false,
 	"editor.tabSize": 2,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
 	"javascript.preferences.quoteStyle": "single",
 	"typescript.preferences.quoteStyle": "single",
 	"prettier.tabWidth": 2,
@@ -146,7 +152,11 @@
 			"const { t } = useTranslation()",
 			"",
 			" return (",
-			"  <div className={classNames(cls.<FTName>, {}, [className])} {...otherProps}>",
+			"  <div",
+			"    data-testid='<FTName>'",
+			"    className={classNames(cls.<FTName>, {}, [className])}",
+			"    {...otherProps}",
+			"   >",
 			"   {children}",
 			"  </div>",
 			" )",
@@ -157,7 +167,37 @@
 			"",
 			"export { <FTName> }"
 		],
-		"module scss": [".<FTName> {}"]
+		"module scss": [".<FTName> {}"],
+		"test": [
+			"import { render, screen } from '@testing-library/react';",
+			"import { <FTName> } from './<FTName>';",
+			"",
+			"describe('<FTName>', () => {",
+			" test('<FTName> render', () => {",
+			"  render(<<FTName>></<FTName>>);",
+			"  expect(screen.getByTestId('<FTName>')).toBeInTheDocument();",
+			" });",
+			"});"
+		],
+		"storybook stories": [
+			"import type { Meta, StoryObj } from '@storybook/react';",
+			"import { <FTName> } from './<FTName>';",
+			"",
+			"const meta = {",
+			" title: 'Example/<FTName>',",
+			" component: <FTName>,",
+			" tags: ['autodocs'],",
+			"} satisfies Meta<typeof Button>;",
+			"",
+			"export default meta;",
+			"type Story = StoryObj<typeof meta>;",
+			"",
+			"export const Primary: Story = {",
+			" args: {",
+			"  children: '<FTName>',",
+			" },",
+			"};"
+		]
 	},
 	"folderTemplates.structures": [
 		{
@@ -172,6 +212,14 @@
 					"template": "module scss"
 				},
 				{
+					"fileName": "ui/<FTName>.test.tsx",
+					"template": "test"
+				},
+				{
+					"fileName": "ui/<FTName>.stories.tsx",
+					"template": "storybook stories"
+				},
+				{
 					"fileName": "index.ts",
 					"template": "index.ts"
 				}
@@ -183,6 +231,14 @@
 				{
 					"fileName": "<FTName>.tsx",
 					"template": "React Component"
+				},
+				{
+					"fileName": "ui/<FTName>.test.tsx",
+					"template": "test"
+				},
+				{
+					"fileName": "ui/<FTName>.stories.tsx",
+					"template": "storybook stories"
 				},
 				{
 					"fileName": "<FTName>.module.scss",

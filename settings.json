@@ -55,6 +55,19 @@
 	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
 	"editor.fontFamily": "JetBrains Mono",
 	"editor.fontLigatures": true,
+	// exclude
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/node_modules": true,
+		"**/.idea": true,
+		"**/.next": true,
+		"**/next-env.d.ts": true
+	},
 
 	// * EMMET: bug fix JSX
 	"emmet.includeLanguages": {
@@ -63,30 +76,43 @@
 	},
 
 	// * i18n-ally : bug cyrillic fix
-	"i18n-ally.regex.key": ".*?",
+	// "i18n-ally.regex.key": ".*?",
 
 	// * Extensions: Code Spell Checker
 	"cSpell.language": "en, ru",
 	"cSpell.userWords": [
 		"aiogram",
+		"aliexpress",
 		"autodocs",
 		"autopep",
+		"autoplay",
 		"Behance",
 		"blackhole",
 		"Boosty",
 		"callout",
+		"camelcase",
 		"clsx",
 		"codewars",
 		"Dispath",
 		"dotenv",
+		"drei",
 		"elementor",
 		"esbenp",
 		"iconbox",
 		"iconboxes",
+		"keyframes",
+		"languagedetector",
+		"linebreak",
+		"Lngs",
+		"LOCALSTORAGE",
+		"maath",
 		"maxsplit",
 		"Melior",
 		"Metrika",
+		"multilines",
 		"nestjs",
+		"nextjs",
+		"nextui",
 		"noselect",
 		"Parens",
 		"Photoshop",
@@ -94,7 +120,11 @@
 		"pyrogram",
 		"reduxjs",
 		"Runtimes",
+		"sber",
 		"stylelint",
+		"svgr",
+		"Swiper",
+		"tailwindcss",
 		"testid",
 		"WAVEBAR",
 		"webm",
@@ -102,22 +132,22 @@
 		"Иконка",
 		"лоадеры",
 		"откл",
-		"скролл"
+		"скролл",
+		"скроллом",
+		"Эндпоинт"
 	],
 
-	// * Extensions: ESLINT
-	// "editor.codeActionsOnSave": {
-	// 	"source.fixAll": "always"
-	// },
-
-	// * Extensions: Prettier
+	// * Extensions: Linters
 	"editor.formatOnSave": true,
 	"editor.formatOnPaste": true,
 	"editor.insertSpaces": false,
 	"editor.tabSize": 2,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"scss.lint.unknownAtRules": "ignore",
 	"editor.codeActionsOnSave": {
-		"source.organizeImports": "explicit"
+		"source.organizeImports": "explicit",
+		"source.fixAll.stylelint": "explicit"
+		// 	"source.fixAll": "always"
 	},
 	"javascript.preferences.quoteStyle": "single",
 	"typescript.preferences.quoteStyle": "single",
@@ -274,7 +304,6 @@
 	"[scss]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
-	"workbench.settings.applyToAllProfiles": [],
 	"liveServer.settings.donotShowInfoMsg": true,
 	"security.workspace.trust.untrustedFiles": "open",
 	"explorer.confirmDragAndDrop": false,
@@ -298,10 +327,32 @@
 		"javascript": false
 	},
 	"workbench.activityBar.location": "top",
-	"i18n-ally.displayLanguage": "ru",
-	"i18n-ally.dirStructure": "auto",
 	"stylelint.snippet": ["scss"],
 	"stylelint.validate": ["css", "less", "postcss", "scss"],
 	"inlang.userId": "cf4e99dd-80f9-4c16-9e18-4f7f1c15938e",
-	"workbench.sideBar.location": "right"
+	"window.commandCenter": false,
+	"workbench.layoutControl.enabled": false,
+	"cssVariables.lookupFiles": [
+		// "src/**/*.css",
+		"src/**/*.scss",
+		"src/**/*.sass",
+		"src/**/*.less"
+	],
+	"cssVariables.blacklistFolders": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/node_modules",
+		"**/bower_components",
+		"**/tmp",
+		"**/dist",
+		"**/tests",
+		"**/.next"
+	],
+	"workbench.sideBar.location": "right",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"i18n-ally.displayLanguage": "ru",
+	"i18n-ally.keystyle": "nested"
 }

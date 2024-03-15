@@ -20,5 +20,9 @@
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) `&&` [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - [Toggle Quotes](https://marketplace.visualstudio.com/items?itemName=BriteSnow.vscode-toggle-quotes)
 - [CSS Modules](https://marketplace.visualstudio.com/items?itemName=clinyong.vscode-css-modules)
-- [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar)
+<!-- - [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) -->
+- [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables)
 - [Camel Case Navigation](https://marketplace.visualstudio.com/items?itemName=maptz.camelcasenavigation)
+<!-- - [Bracketeer](https://marketplace.visualstudio.com/items?itemName=pustelto.bracketeer) -->
+- [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
+- [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)

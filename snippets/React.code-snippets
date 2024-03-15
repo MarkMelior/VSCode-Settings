@@ -1,0 +1,31 @@
+{
+	"className": {
+		"prefix": "cn",
+		"body": ["className={cl(cls.${1:${TM_FILENAME_BASE}}, {$2}, [$3])}"],
+		"scope": "typescript, typescriptreact, javascript, javascriptreact"
+	},
+	// "Export index": {
+	// 	"prefix": "ets",
+	// 	"body": [
+	// 		"export { ${1:${TM_FOLDERNAME}} } from './${1:${TM_FOLDERNAME}}';"
+	// 	],
+	// 	"scope": "typescript, typescriptreact, javascript, javascriptreact"
+	// },
+	"useState": {
+		"prefix": "us",
+		"body": [
+			"const [is${1:name}, setIs${1:Name}] = useState<${2:boolean}>($3)"
+		],
+		"scope": "typescript, typescriptreact, javascript, javascriptreact"
+	},
+	"useEffect": {
+		"prefix": "uf",
+		"body": ["useEffect(() => {", "	${1:return () => {}}", "}, [$2])"],
+		"scope": "typescript, typescriptreact, javascript, javascriptreact"
+	},
+	"i18n": {
+		"prefix": "t",
+		"body": ["{t('${1:Привет мир!}')}"],
+		"scope": "typescript, typescriptreact, javascript, javascriptreact"
+	}
+}

@@ -12,7 +12,7 @@
 			"}",
 			"",
 			"export const ${1:${TM_FILENAME_BASE}}: FC<${1:${TM_FILENAME_BASE}}Props> = ({",
-			"	className = '',",
+			"	className,",
 			"	children",
 			"}) => {",
 			"	return (",
@@ -23,6 +23,15 @@
 			"		</div>",
 			"	);",
 			"};"
+		],
+		"scope": "typescript, typescriptreact, javascript, javascriptreact"
+	},
+	"React Svg Icon Component": {
+		"prefix": "rs",
+		"body": [
+			"export const ${TM_FILENAME_BASE}Icon = ({ color = 'var(--color-main-inverted)', ...props }) => (",
+			"	$1",
+			");"
 		],
 		"scope": "typescript, typescriptreact, javascript, javascriptreact"
 	},
@@ -40,7 +49,7 @@
 			"}",
 			"",
 			"export const ${1:${TM_FILENAME_BASE}}: FC<${1:${TM_FILENAME_BASE}}Props> = ({",
-			"	className = '',",
+			"	className,",
 			"	children",
 			"}) => {",
 			"	const t = useTranslations('${1:${TM_FILENAME_BASE}}');",

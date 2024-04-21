@@ -66,7 +66,8 @@
 		"**/node_modules": true,
 		"**/.idea": true,
 		"**/.next": true,
-		"**/next-env.d.ts": true
+		"**/next-env.d.ts": true,
+		"dist": true
 	},
 
 	// * EMMET: bug fix JSX
@@ -83,6 +84,7 @@
 	"cSpell.userWords": [
 		"aiogram",
 		"aliexpress",
+		"AUTHDATABASE",
 		"autodocs",
 		"autopep",
 		"autoplay",
@@ -98,6 +100,7 @@
 		"drei",
 		"elementor",
 		"esbenp",
+		"Foren",
 		"iconbox",
 		"iconboxes",
 		"keyframes",
@@ -115,6 +118,7 @@
 		"nextui",
 		"noselect",
 		"Parens",
+		"persistor",
 		"Photoshop",
 		"postbuild",
 		"pyrogram",
@@ -126,8 +130,10 @@
 		"Swiper",
 		"tailwindcss",
 		"testid",
+		"typeorm",
 		"WAVEBAR",
 		"webm",
+		"webp",
 		"webstorm",
 		"Иконка",
 		"лоадеры",
@@ -351,8 +357,8 @@
 		"**/tests",
 		"**/.next"
 	],
-	"workbench.sideBar.location": "right",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"i18n-ally.displayLanguage": "ru",
-	"i18n-ally.keystyle": "nested"
+	"i18n-ally.keystyle": "nested",
+	"workbench.sideBar.location": "right"
 }

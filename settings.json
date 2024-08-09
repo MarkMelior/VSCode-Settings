@@ -58,16 +58,10 @@
 	// exclude
 	"files.exclude": {
 		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/Thumbs.db": true,
 		"**/node_modules": true,
 		"**/.idea": true,
-		"**/.next": true,
-		"**/next-env.d.ts": true,
-		"dist": true
+		"**/.next": true
+		// "**/*.test.*": true // ! temporal
 	},
 
 	// * EMMET: bug fix JSX
@@ -81,67 +75,6 @@
 
 	// * Extensions: Code Spell Checker
 	"cSpell.language": "en, ru",
-	"cSpell.userWords": [
-		"aiogram",
-		"aliexpress",
-		"AUTHDATABASE",
-		"autodocs",
-		"autopep",
-		"autoplay",
-		"Behance",
-		"blackhole",
-		"Boosty",
-		"callout",
-		"camelcase",
-		"clsx",
-		"codewars",
-		"Dispath",
-		"dotenv",
-		"drei",
-		"elementor",
-		"esbenp",
-		"Foren",
-		"iconbox",
-		"iconboxes",
-		"keyframes",
-		"languagedetector",
-		"linebreak",
-		"Lngs",
-		"LOCALSTORAGE",
-		"maath",
-		"maxsplit",
-		"Melior",
-		"Metrika",
-		"multilines",
-		"nestjs",
-		"nextjs",
-		"nextui",
-		"noselect",
-		"Parens",
-		"persistor",
-		"Photoshop",
-		"postbuild",
-		"pyrogram",
-		"reduxjs",
-		"Runtimes",
-		"sber",
-		"stylelint",
-		"svgr",
-		"Swiper",
-		"tailwindcss",
-		"testid",
-		"typeorm",
-		"WAVEBAR",
-		"webm",
-		"webp",
-		"webstorm",
-		"Иконка",
-		"лоадеры",
-		"откл",
-		"скролл",
-		"скроллом",
-		"Эндпоинт"
-	],
 
 	// * Extensions: Linters
 	"editor.formatOnSave": true,
@@ -163,146 +96,25 @@
 	"prettier.singleQuote": true,
 	"prettier.trailingComma": "all",
 	"prettier.arrowParens": "always",
-	"prettier.jsxSingleQuote": true,
+	"prettier.jsxSingleQuote": false,
 	"prettier.bracketSpacing": true,
 	"editor.wordWrap": "on",
 	"prettier.printWidth": 80,
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.autopep8"
 	},
-
-	// * Extensions: Folder-templates
-	"folderTemplates.fileTemplates": {
-		"React Component": [
-			"import { FC, ReactNode } from 'react'",
-			"import cls from './<FTName>.module.scss'",
-			"import { classNames } from 'shared/lib/classNames/classNames'",
-			"import { useTranslation } from 'react-i18next'",
-			"",
-			"interface <FTName>Props {",
-			" className?: string",
-			" children?: ReactNode",
-			"}",
-			"",
-			"export const <FTName>: FC<<FTName>Props> = ({ className, children, ...otherProps }) => {",
-			"const { t } = useTranslation()",
-			"",
-			" return (",
-			"  <div",
-			"    data-testid='<FTName>'",
-			"    className={classNames(cls.<FTName>, {}, [className])}",
-			"    {...otherProps}",
-			"   >",
-			"   {children}",
-			"  </div>",
-			" )",
-			"}"
-		],
-		"index.ts": [
-			"import { <FTName> } from './ui/<FTName>'",
-			"",
-			"export { <FTName> }"
-		],
-		"module scss": [".<FTName> {}"],
-		"test": [
-			"import { render, screen } from '@testing-library/react';",
-			"import { <FTName> } from './<FTName>';",
-			"",
-			"describe('<FTName>', () => {",
-			" test('<FTName> render', () => {",
-			"  render(<<FTName>></<FTName>>);",
-			"  expect(screen.getByTestId('<FTName>')).toBeInTheDocument();",
-			" });",
-			"});"
-		],
-		"storybook stories": [
-			"import type { Meta, StoryObj } from '@storybook/react';",
-			"import { <FTName> } from './<FTName>';",
-			"",
-			"const meta = {",
-			" title: 'Example/<FTName>',",
-			" component: <FTName>,",
-			" tags: ['autodocs'],",
-			"} satisfies Meta<typeof Button>;",
-			"",
-			"export default meta;",
-			"type Story = StoryObj<typeof meta>;",
-			"",
-			"export const Primary: Story = {",
-			" args: {",
-			"  children: '<FTName>',",
-			" },",
-			"};"
-		]
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
 	},
-	"folderTemplates.structures": [
-		{
-			"name": "FSD",
-			"structure": [
-				{
-					"fileName": "ui/<FTName>.tsx",
-					"template": "React Component"
-				},
-				{
-					"fileName": "ui/<FTName>.module.scss",
-					"template": "module scss"
-				},
-				{
-					"fileName": "ui/<FTName>.test.tsx",
-					"template": "test"
-				},
-				{
-					"fileName": "ui/<FTName>.stories.tsx",
-					"template": "storybook stories"
-				},
-				{
-					"fileName": "index.ts",
-					"template": "index.ts"
-				}
-			]
-		},
-		{
-			"name": "React Component",
-			"structure": [
-				{
-					"fileName": "<FTName>.tsx",
-					"template": "React Component"
-				},
-				{
-					"fileName": "ui/<FTName>.test.tsx",
-					"template": "test"
-				},
-				{
-					"fileName": "ui/<FTName>.stories.tsx",
-					"template": "storybook stories"
-				},
-				{
-					"fileName": "<FTName>.module.scss",
-					"template": "module scss"
-				}
-			]
-		}
-	],
+
+	// * FOLDER MANUAL SORT
+	// "folders": [
+	// 	{
+	// 		"name": "",
+	// 	},
+	// ],
 
 	// todo --- OTHER ---
-	"codeium.enableCodeLens": false,
-	"liveSassCompile.settings.formats": [
-		{
-			"format": "compressed",
-			"extensionName": ".css",
-			"savePath": "/"
-		}
-		// {
-		// 	"format": "expanded",
-		// 	"extensionName": ".css",
-		// 	"savePath": "~/css"
-		// },
-		// {
-		// 	"format": "compressed",
-		// 	"extensionName": ".css",
-		// 	"savePath": "/dist/css"
-		// }
-	],
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
@@ -314,12 +126,8 @@
 	"security.workspace.trust.untrustedFiles": "open",
 	"explorer.confirmDragAndDrop": false,
 	"explorer.confirmDelete": false,
-	"gitlens.graph.minimap.additionalTypes": ["tags", "localBranches"],
-	"gitlens.graph.minimap.enabled": false,
 	"git.autofetch": true,
 	"terminal.integrated.env.windows": {},
-	"gitlens.views.remotes.branches.layout": "list",
-	"gitlens.views.commitDetails.files.layout": "tree",
 	"console-ninja.featureSet": "Community",
 	"bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
 	"workbench.startupEditor": "none",
@@ -338,27 +146,9 @@
 	"inlang.userId": "cf4e99dd-80f9-4c16-9e18-4f7f1c15938e",
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
-	"cssVariables.lookupFiles": [
-		// "src/**/*.css",
-		"src/**/*.scss",
-		"src/**/*.sass",
-		"src/**/*.less"
-	],
-	"cssVariables.blacklistFolders": [
-		"**/.git",
-		"**/.svn",
-		"**/.hg",
-		"**/CVS",
-		"**/.DS_Store",
-		"**/node_modules",
-		"**/bower_components",
-		"**/tmp",
-		"**/dist",
-		"**/tests",
-		"**/.next"
-	],
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	"i18n-ally.displayLanguage": "ru",
-	"i18n-ally.keystyle": "nested",
+	"window.titleBarStyle": "custom",
+	"vscode_vibrancy.opacity": -1,
+	"vscode_vibrancy.theme": "Default Light",
 	"workbench.sideBar.location": "right"
 }
